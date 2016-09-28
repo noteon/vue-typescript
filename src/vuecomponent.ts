@@ -66,7 +66,7 @@ function createDecorator(name?:string, options?:vuejs.ComponentOption){
                         computed_obj.get = prop_desc.get;
                         computed_obj.set = prop_desc.set;
                     } else {
-                        if (computed_obj)
+                        if (computed_obj!=={})
                           computed_obj.get = prop_desc.get;
                         else
                             computed_obj = prop_desc.get;
