@@ -61,12 +61,15 @@ function createDecorator(name?:string, options?:vuejs.ComponentOption){
             if (key.charAt(0) != '$' && key.charAt(0) != '_'){
                 var prop_desc = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(newi), key);
                 if (prop_desc && prop_desc.get) {
-                    var computed_obj:any = {};
+                    var computed_obj:any =options.computed[key]|| {};
                     if(prop_desc.set){
                         computed_obj.get = prop_desc.get;
                         computed_obj.set = prop_desc.set;
                     } else {
-                        computed_obj = prop_desc.get;
+                        if (computed_obj)
+                          computed_obj.get = prop_desc.get;
+                        else
+                            computed_obj = prop_desc.get;
                     }
                     options.computed[key] = computed_obj;
                 }

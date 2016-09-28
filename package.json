@@ -1,7 +1,7 @@
 {
-  "name": "vue-typescript",
-  "version": "0.6.1",
-  "description": "Typescript decorators to make vue play nice with typescript",
+  "name": "mb-vue-typescript",
+  "version": "0.6.1_1",
+  "description": "Typescript decorators to make vue play nice with typescript, cache:false",
   "main": "lib/index.js",
   "scripts": {
     "prepublish": "npm run clean && npm run build",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/itsFrank/vue-typescript.git"
+    "url": "git+https://github.com/noteon/vue-typescript.git"
   },
   "keywords": [
     "vue",
@@ -23,9 +23,9 @@
   "author": "Francis O'Brien",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/itsFrank/vue-typescript/issues"
+    "url": "https://github.com/noteon/vue-typescript/issues"
   },
-  "homepage": "https://github.com/itsFrank/vue-typescript#readme",
+  "homepage": "https://github.com/noteon/vue-typescript#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-as-promised": "^5.3.0",
