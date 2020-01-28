@@ -1,6 +1,6 @@
 {
   "name": "vue-typescript",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Typescript decorators to make vue play nice with typescript, cache:false",
   "main": "lib/index.js",
   "scripts": {
