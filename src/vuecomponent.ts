@@ -71,6 +71,10 @@ function createDecorator(name?:string, options?:vuejs.ComponentOption){
                         else
                             computed_obj = prop_desc.get;
                     }
+                    if (newi.$$noCache && newi.$$noCache[key]){
+                        computed_obj.cache=false;
+                    }
+
                     options.computed[key] = computed_obj;
                 }
                 else if (typeof(newi[key]) == 'function'){

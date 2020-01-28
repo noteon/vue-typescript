@@ -30,6 +30,7 @@ Alternatively, clone the [vue-typescript-seed](https://github.com/itsFrank/vue-t
 - **@Prop** - A variable decorator that adds a class' variables to the prop object instead of data
 - **@Watch** - A variable or function decorator that adds a property to the watch object mapping the desired function as handler
 - **Computed Properties** - to define computed properties, simply use the native typescript syntax `get` and `set` (see example below)
+- **@NoCache** - to turning off caching for a specific computed property
 
 # Usage
 ##### @VueComponent
@@ -258,6 +259,7 @@ class ComputedStuff {
     firstname:String = 'Jon';
     lastname:String = 'Snowflake';
 
+    @NoCache
     get fullname():string {
         return this.firstname + ' ' + this.lastname;
     }
@@ -284,6 +286,7 @@ Vue.component('computed-stuff', {
     },
     computed: {
         fullname: {
+            cache:false,
             get: function(){
                 return this.firstname + ' ' + this.lastname;
             },
